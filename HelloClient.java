@@ -78,7 +78,6 @@ public class HelloClient implements Runnable {
 					String texto = ">: ";
 
 					if (showMsg.contains(texto)){
-						//String st1 = "Ricardo"; String st2 = st1.substring(0, 3);
 						FileWriter arq = new FileWriter(usuario+"-0"+contArq+".client");
 						PrintWriter gravarArq = new PrintWriter(arq);
 						array = showMsg.split(">: ");
