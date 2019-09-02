@@ -38,12 +38,15 @@ public class HelloServer implements HelloIntermediate {
 		String array[] = new String[2];
 		String texto = ">: ";
 
-		
-		FileWriter arq = new FileWriter(usuario+"-0"+codUsuario+".serv");
-		PrintWriter gravarArq = new PrintWriter(arq);
-		gravarArq.printf(msg);
-		arq.close();
-					
+		try	{
+			FileWriter arq = new FileWriter(usuario+"-0"+codUsuario+".serv");
+			PrintWriter gravarArq = new PrintWriter(arq);
+			gravarArq.printf(msg);
+			arq.close();
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
+
 		Mensagens.add(String.format("< " +usuario +">: " +msg +"\n"));
 	}
 
