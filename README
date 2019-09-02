@@ -1,0 +1,39 @@
+
+INSTRUÇÕES DE COMO EXECUTAR CORRETAMENTE O CHAT RMI
+
+----------------
+
+EXECUÇÃO DO SERVIDOR:
+
+Primeiro iremos compilar e executar o servidor em um terminal, dado pelo comando:
+  $ make servidor
+
+----------------
+
+EXECUÇÃO DOS CLIENTES:
+
+A seguir, podemos começar a compilar e executar os clientes, em diferentes terminais, independente da máquina, dado pelo comando:
+  $ make cliente
+
+----------------
+
+AÇÕES DENTRO DO CHAT:
+
+Após entrar como um cliente, você deve escolher seu nome, a qual o sistema não permite que seja igual ao de algum usuário já logado.
+
+Após entrar com um nome válido, você recebe a mensagem que entrou e está permitido a mandar mensagens no chat.
+
+O chat só permite transmissão de mensagens, não havendo suporte para arquivos de entrada e não gerando também arquivos de saída.
+Os únicos arquivos gerados pelo programa são do tipo .class, que podem ser limpados com os comandos indicados mais a frente.
+
+Para sair do chat basta digitar "exit", como mostrado abaixo:
+  $ exit
+
+-----------------
+
+LIMPEZA APÓS TÉRMINO DO CHAT:
+
+Caso deseje limpar os arquivos *.class após o encerramento do programa, faça:
+  $ make clean
+
+-----------------
