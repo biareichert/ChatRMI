@@ -6,6 +6,7 @@ import java.io.*;
 import java.net.*;
 import java.lang.*;
 import java.util.*;
+import java.nio.file.*;
 
 public class HelloServer implements HelloIntermediate {
 	public HelloServer() {}
@@ -34,6 +35,15 @@ public class HelloServer implements HelloIntermediate {
 
 	public void addMsg(int codUsuario, String msg) throws RemoteException {
 		String usuario = clientes.get(codUsuario);
+		String array[] = new String[2];
+		String texto = ">: ";
+
+		
+		FileWriter arq = new FileWriter(usuario+"-0"+codUsuario+".serv");
+		PrintWriter gravarArq = new PrintWriter(arq);
+		gravarArq.printf(msg);
+		arq.close();
+					
 		Mensagens.add(String.format("< " +usuario +">: " +msg +"\n"));
 	}
 
