@@ -63,8 +63,6 @@ public class HelloClient implements Runnable {
 	public void run(){
 		try	{
 			while (!closed) {
-				//inBuf = new byte[256];
-				//inPacket = new DatagramPacket(inBuf, inBuf.length);
 				codPrimMsg = stub.qtdMensagens();
 				if (codPrimMsg > codUltMsg) {
 					showMsg = stub.recMsg(codUltMsg, codPrimMsg);
